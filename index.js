@@ -12,7 +12,7 @@ const questions = [{
 },
 {
     message: 'Describe your project',
-    name: 'Description',
+    name: 'description',
 },
 {
     message: 'Why did you make it?',
@@ -60,6 +60,7 @@ function writeToFile(data) {
 }
 
 // TODO: Create a function to initialize app
+// upon running index.js runs the inquirer prompt and after completion writes to file
 function init() {
     inquirer.prompt(questions).then((data) => {
         const README = md.generateMarkdown(data)
